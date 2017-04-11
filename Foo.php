@@ -27,7 +27,7 @@ class Foo
      */
     public function doSomething()
     {
-        $this->doSomeShit($this->qux, 12);
+        //$this->doSomeShit($this->qux, 12); TODO: find a way to remove this comment (maybe by removing the "//"?)
         $this->doSomeShit($this->baz, $this->qux);
         $this->doSomeShit($this->qux, $this->bar);
         return true;

@@ -27,7 +27,7 @@ class Foo
      */
     public function doSomething()
     {
-        $this->doSomeShit($this->bar, 12);
+        $this->doSomeShit($this->quux, 12);
         $this->doSomeShit($this->baz, $this->quux);
         $this->doSomeShit($this->quux, $this->bar);
         return true;

@@ -27,9 +27,9 @@ class Foo
      */
     public function doSomething()
     {
-        $this->doSomeShit($this->bar, $this->baz);
-        $this->doSomeShit($this->baz, $this->qux);
-        $this->doSomeShit($this->qux, $this->bar);
+        $this->doJackShit($this->bar, $this->baz);
+        $this->doJackShit($this->baz, $this->qux);
+        $this->doJackShit($this->qux, $this->bar);
         return true;
     }
 
@@ -37,8 +37,8 @@ class Foo
      * @param $arg1
      * @param $arg2
      */
-    private function doSomeShit($arg1, $arg2)
+    private function doJackShit($arg1, $arg2)
     {
-        // TODO: do some shit
+        // I will not do anything, MOM!
     }
 }

@@ -27,9 +27,11 @@ class Foo
      */
     public function doSomething()
     {
-        //$this->doSomeShit($this->qux, 12); TODO: find a way to remove this comment (maybe by removing the "//"?)
-        $this->doSomeShit($this->baz, $this->qux);
-        $this->doSomeShit($this->qux, $this->bar);
+        for ($i = 0; $i < $this->qux; $i++) {
+            $this->doSomeShit($i * $this->bar, $this->baz);
+        }
+        $this->doSomeShit($this->baz, 13);
+        $this->doSomeShit($this->bar, $this->baz);
         return true;
     }
 
@@ -39,6 +41,5 @@ class Foo
      */
     private function doSomeShit($arg1, $arg2)
     {
-        // TODO: do some shit
     }
 }

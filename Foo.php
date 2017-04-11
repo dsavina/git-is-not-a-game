@@ -41,6 +41,14 @@ class Foo
         for ($i = 0; $i < $arg; $i++) {
             $this->doSomeShit($i * $this->bar, $this->baz);
         }
+        $i = $arg;
+        do {
+            if ($i <= 0) {
+                $i++;
+            } else {
+                $i *= 2;
+            }
+        } while($i < 10);
     }
 
     /**

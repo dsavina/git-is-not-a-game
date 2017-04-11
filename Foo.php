@@ -27,12 +27,20 @@ class Foo
      */
     public function doSomething()
     {
-        for ($i = 0; $i < $this->quux; $i++) {
-            $this->doSomeShit($i * $this->bar, $this->baz);
-        }
+        $this->definitelyDoSomething($this->quux);
         $this->doSomeShit($this->baz, 13);
         $this->doSomeShit($this->bar, $this->baz);
         return true;
+    }
+
+    /**
+     * @param $arg
+     */
+    private function definitelyDoSomething($arg)
+    {
+        for ($i = 0; $i < $arg; $i++) {
+            $this->doSomeShit($i * $this->bar, $this->baz);
+        }
     }
 
     /**

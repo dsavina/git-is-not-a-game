@@ -39,6 +39,6 @@ class Foo
      */
     private function doSomeShit($arg1, $arg2)
     {
-        // TODO: do some shit
+        // I will not do anything, MOM!
     }
 }

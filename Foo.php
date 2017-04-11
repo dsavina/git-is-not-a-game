@@ -7,19 +7,19 @@ class Foo
 {
     private $bar;
     private $baz;
-    private $qux;
+    private $quux;
 
     /**
      * Foo constructor.
      * @param $bar
      * @param $baz
-     * @param $qux
+     * @param $quux
      */
-    function __construct($bar, $baz, $qux)
+    function __construct($bar, $baz, $quux)
     {
         $this->bar = $bar;
         $this->baz = $baz;
-        $this->qux = $qux;
+        $this->quux = $quux;
     }
 
     /**
@@ -27,7 +27,7 @@ class Foo
      */
     public function doSomething()
     {
-        for ($i = 0; $i < $this->qux; $i++) {
+        for ($i = 0; $i < $this->quux; $i++) {
             $this->doSomeShit($i * $this->bar, $this->baz);
         }
         $this->doSomeShit($this->baz, 13);

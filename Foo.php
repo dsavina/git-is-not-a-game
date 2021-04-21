@@ -7,19 +7,19 @@ class Foo
 {
     private $bar;
     private $baz;
-    private $qux;
+    private $quux;
 
     /**
      * Foo constructor.
      * @param $bar
      * @param $baz
-     * @param $qux
+     * @param $quux
      */
-    function __construct($bar, $baz, $qux)
+    function __construct($bar, $baz, $quux)
     {
         $this->bar = $bar;
         $this->baz = $baz;
-        $this->qux = $qux;
+        $this->quux = $quux;
     }
 
     /**
@@ -27,10 +27,28 @@ class Foo
      */
     public function doSomething()
     {
+        $this->definitelyDoSomething($this->quux);
+        $this->doJackShit($this->baz, 13);
         $this->doJackShit($this->bar, $this->baz);
-        $this->doJackShit($this->baz, $this->qux);
-        $this->doJackShit($this->qux, $this->bar);
         return true;
+    }
+
+    /**
+     * @param $arg
+     */
+    private function definitelyDoSomething($arg)
+    {
+        for ($i = 0; $i < $arg; $i++) {
+            $this->doJackShit($i * $this->bar, $this->baz);
+        }
+        $i = $arg;
+        do {
+            if ($i <= 0) {
+                $i++;
+            } else {
+                $i *= 2;
+            }
+        } while($i < 10);
     }
 
     /**

@@ -7,19 +7,19 @@ class Foo
 {
     private $bar;
     private $baz;
-    private $qux;
+    private $quux;
 
     /**
      * Foo constructor.
      * @param $bar
      * @param $baz
-     * @param $qux
+     * @param $quux
      */
-    function __construct($bar, $baz, $qux)
+    function __construct($bar, $baz, $quux)
     {
         $this->bar = $bar;
         $this->baz = $baz;
-        $this->qux = $qux;
+        $this->quux = $quux;
     }
 
     /**
@@ -28,8 +28,8 @@ class Foo
     public function doSomething()
     {
         $this->doJackShit($this->bar, $this->baz);
-        $this->doJackShit($this->baz, $this->qux);
-        $this->doJackShit($this->qux, $this->bar);
+        $this->doJackShit($this->baz, $this->quux);
+        $this->doJackShit($this->quux, $this->bar);
         return true;
     }
 

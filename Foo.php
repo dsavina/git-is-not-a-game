@@ -27,9 +27,28 @@ class Foo
      */
     public function doSomething()
     {
+        $this->definitelyDoSomething($this->quux);
         $this->doJackShit($this->baz, 13);
         $this->doJackShit($this->bar, $this->baz);
         return true;
+    }
+
+    /**
+     * @param $arg
+     */
+    private function definitelyDoSomething($arg)
+    {
+        for ($i = 0; $i < $arg; $i++) {
+            $this->doJackShit($i * $this->bar, $this->baz);
+        }
+        $i = $arg;
+        do {
+            if ($i <= 0) {
+                $i++;
+            } else {
+                $i *= 2;
+            }
+        } while($i < 10);
     }
 
     /**
